@@ -3,7 +3,6 @@ package main
 import (
 	_ "embed"
 	"fmt"
-	"math"
 	"slices"
 	"strconv"
 	"strings"
@@ -34,7 +33,7 @@ func Part1(input string) int {
 	slices.Sort(rightList)
 
 	for i := 0; i < len(leftList); i++ {
-		totalDistance += int(math.Abs(float64(leftList[i]) - float64(rightList[i])))
+		totalDistance += utils.Abs(leftList[i] - rightList[i])
 	}
 
 	return totalDistance
